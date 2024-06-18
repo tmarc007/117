@@ -9,22 +9,74 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/base.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/sections.css">
-        <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="stylesheet" href="{% static './css/base.css' %}">
+        <link rel="stylesheet" href="{% static './css/header.css' %}">
+        <link rel="stylesheet" href="{% static './css/sections.css' %}">
+        <link rel="stylesheet" href="{% static './css/responsive.css' %}">
         <title>Document</title>
     </head>
         
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-    <h1>Here is my header</h1>
+
+    <header class="center-row">
+        <!-- left side -->
+        <div class="logo center-row">
+            <a href="">
+                <h2>Thomas Marcello</h2>
+            </a>
+        </div>
+
+        <!-- right side -->
+        <nav class="nav-menu">
+            <!-- hamburger button -->
+            <input type="checkbox" id="check-option">
+
+            <div class="nav-btn">
+                <label for="check-option">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <!-- menu -->
+            <div class="nav-option center-row">
+                <a href="{% url 'about' %}">About Me</a>
+                <a href="{% url 'projects_list' %}">Projects</a>
+                <a href="">Experience</a>
+                <a href="{% url 'contact' %}">Contact</a>
+
+            </div>
+        </nav>
+    </header>
+
 
     {% block content %}
+    <section class="projects-section center-column">
+        <h2>Projects</h2>
+
+        <div class="projects-list">
+            <!-- All the cards here -->
+            
+            <div class="project-card">
+                <a href="https://github.com" target="blank">
+                    <img src="{% static './img/picture-1.jpg' %}" alt="">
+                    <p>First Project Name</p>
+                    <p>This is the description of my first project. It should be a short description.</p>
+                    <p>YYYY</p>
+
+                    <div class="skills-list center-row">
+                        <label class="label-text">Skill</label>
+                        <label class="label-text">Skill</label>
+                        <label class="label-text">Skill</label>
+                        <label class="label-text">Skill</label>
+                    </div>
+                </a>
+            </div>
 
     {% endblock content %}
 
-    <h2>Here is my footer</h2>
 </body>
 </html>

@@ -1,12 +1,43 @@
 {% extends 'base.html' %}
 
 {% block title %}About Me{% endblock title %}
-
-
+{% load static %}
 {% block content %}
 
 <!-- Here all your About me section -->
+<section class="about-section center-row">
+    <div class="about-image-container center-row">
+        <img src="{% static './img/propic1.jpg' %}">
+    </div>
 
-<h1>Hello! This is about me</h1>
+    <div class="about-description-container center-column">
+        <h1>Frontend Developer</h1>
+        <h2>Thomas Marcello</h2>
+
+        <p>As a Frontend Developer with a diverse skill set, I excel in designing intuitive user experiences (UX) and bringing them to life through meticulous prototyping in Figma. My expertise in creating responsive designs using HTML and CSS ensures that the interfaces I develop are not only visually appealing but also highly functional across various devices and screen sizes. I have a keen eye for detail and a deep understanding of user-centric design principles, allowing me to create seamless, engaging, and accessible digital experiences <br><br>
+            Beyond Frontend Development, I possess robust knowledge in Backend Development, particularly with Django. This enables me to build comprehensive web applications from scratch, handling both the client-side and server-side components. My ability to integrate these skills allows me to create dynamic, interactive, and scalable web solutions that meet complex business needs. Whether working independently or as part of a collaborative team, I am dedicated to delivering high-quality, user-friendly applications that drive results and enhance user satisfaction. 
+        </p>
+
+        <div class="label-container center-column">
+            <h2>Skills</h2>
+
+            <div class="label-list center-row">
+                <label class="label-text">Figma</label>
+                <label class="label-text">Responsive Design</label>
+                <label class="label-text">HTML</label>
+                <label class="label-text">CSS</label>
+                <label class="label-text">Protopyping</label>
+                <label class="label-text">Usability</label>
+                <label class="label-text">Python</label>                    
+                <label class="label-text">Django</label>
+                <label class="label-text">SCRUM</label>
+                <label class="label-text">Agile</label>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
 
 {% endblock content %}
