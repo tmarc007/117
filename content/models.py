@@ -16,7 +16,7 @@ class Project(models.Model):
     description = models.TextField()
     year = models.IntegerField()
     image = models.ImageField(upload_to='project_images/')
-    resopitory = models.URLField()
+    repository = models.URLField()
     technologies = models.ManyToManyField(Technology)
 
     def __str__(self):
